@@ -10,11 +10,11 @@ class VersionComparator:
 
     def compare(self):
         if self.first > self.second:
-            return '"{0}” is greater than “{1}”. '.format(self.first, self.second)
-        elif self.second > self.first:
-            return '"{0}” is greater than “{1}”. '.format(self.second, self.first)
+            return '"{0}” is greater than “{1}”.'.format(self.first, self.second)
+        elif self.first < self.second:
+            return '"{0}” is less than “{1}”.'.format(self.first, self.second)
         elif self.first == self.second:
-            return '"{0}” is equal to “{1}”. '.format(self.first, self.second)
+            return '"{0}” is equal to “{1}”.'.format(self.first, self.second)
         else:
             return 'Invalid input passed! Check and try again.'
 
