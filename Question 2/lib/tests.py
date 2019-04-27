@@ -27,6 +27,14 @@ class TestNumberComparator(unittest.TestCase):
         self.assertEqual(VersionComparator().compare(), 'Invalid input passed! Check and try again.',
                          'Should be invalid')
 
+    def test_invalid_input_4(self):
+        self.assertEqual(VersionComparator(1, '2').compare(), 'Invalid input passed! Check and try again.',
+                         'Should be invalid')
+
+    def test_invalid_input_4(self):
+        self.assertEqual(VersionComparator(['3', '4']).compare(), 'Invalid input passed! Check and try again.',
+                         'Should be invalid')
+
 
 if __name__ == '__main__':
     unittest.main()
