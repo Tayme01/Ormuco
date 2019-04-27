@@ -15,6 +15,18 @@ class TestNumberComparator(unittest.TestCase):
         self.assertEqual(VersionComparator('1.5', '1.5').compare(), '"1.5” is equal to “1.5”.',
                          'Should be equal to')
 
+    def test_invalid_input_1(self):
+        self.assertEqual(VersionComparator('a', '1.5').compare(), 'Invalid input passed! Check and try again.',
+                         'Should be invalid')
+
+    def test_invalid_input_2(self):
+        self.assertEqual(VersionComparator('a').compare(), 'Invalid input passed! Check and try again.',
+                         'Should be invalid')
+
+    def test_invalid_input_3(self):
+        self.assertEqual(VersionComparator().compare(), 'Invalid input passed! Check and try again.',
+                         'Should be invalid')
+
 
 if __name__ == '__main__':
     unittest.main()

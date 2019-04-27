@@ -1,10 +1,10 @@
 class VersionComparator:
-    def __init__(self, first, second):
+
+    def __init__(self, first='nan', second='nan'):
         try:
             self.first = float(first)
             self.second = float(second)
-        except (TypeError, ValueError) as err:
-            print('ERROR: {0}'.format(err.args[0]))
+        except (TypeError, ValueError):
             self.first = float('nan')
             self.second = float('nan')
 
